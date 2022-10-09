@@ -8,7 +8,7 @@ This dataset contains 8732 labeled sound excerptsvof urban sounds from 10 classe
 The UrbanSound8k dataset used for model training, can be downloaded from the following link: 
 https://urbansounddataset.weebly.com/
 
-**Quick Notice: This model has been created by using 2 different notebooks, one directly from the spectograms and the other one from numerical values obatined by spectrograms. According to the data, first model has produced 10% more successful results (epoch = 20, batchsize = 250, if the value is assigned) than the second model.**
+**Quick Notice: In this project 2 cnn model has been created. first model directly trained with the spectrograms and the other one from numerical values obatined by spectrogram images. According to the data, first model which is trained with direct spectrogram has produced 10% more successful results (epoch = 20, batchsize = 250, if the value is assigned) than the second model.**
 
 ## **Preprocessing**
 
@@ -26,7 +26,7 @@ import matplotlib.pyplot as pltimport os
 ```
 
 
-**Creating Spectrograms:**
+**Creating Spectrogram images by audio file:**
 ```
 def createSpectogram2(): 
     # This method creates stpectogram from audio file, converts spectrogram to image and saves spectrogram image to folder by class
@@ -73,7 +73,7 @@ import os
 
 
 **Resizing 2.1:**
-Resizing the X Values:
+Creating spectrogram by audio file:
 
 ```
 path = "UrbanSound8K/audio/"
@@ -93,7 +93,7 @@ spectrogram = np.array(spectrogram)
 ```
 
 **Resizing 2.2:**
-Resizing the Y Values:
+Resizing spectrogram images and converting to numpy array:
 
 
 ```
